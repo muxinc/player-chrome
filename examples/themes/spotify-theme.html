@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>Media Chrome Netflix Theme Example</title>
+  <script type="module" src="../../dist/index.js"></script>
+</head>
+<body>
+
+<style>
+  media-container {
+    flex-direction: column;
+  }
+
+  media-control-bar {
+    background-color: rgb(232, 24, 48);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+  }
+
+  media-play-button {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+
+    transition: all .1s;
+  }
+
+  #media-poster:hover media-play-button {
+    transform: scale(1.1);
+  }
+
+  #media-poster {
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("https://i.scdn.co/image/ab67616d0000b2735618ee6467c0becf0dd23d68");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+</style>
+
+<h1>The Spotify player theme</h1>
+<p>The Spotify player built with media-chrome.</p>
+
+<media-container>
+  <audio
+    slot="media"
+    src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
+    preload="none"
+  ></audio>
+  <media-control-bar>
+    <div id="media-poster">
+      <media-play-button></media-play-button>
+    </div>
+    
+    <media-progress-range></media-progress-range>
+  </media-control-bar>
+</media-container>
+
+</body>
+</html>

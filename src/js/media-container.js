@@ -26,10 +26,14 @@ template.innerHTML = `
       /* Default dimensions
        * max out at 100% width for smaller screens (< 720px)
        * */
-      width: 720px;
       max-width: 100%;
-      height: 480px;
       background-color: #000;
+    }
+
+    /* Video specific styles */
+    :host(:not([audio])) {
+      height: 480px;
+      width: 720px;
     }
 
     /* Safari needs this to actually make the element fill the window */
